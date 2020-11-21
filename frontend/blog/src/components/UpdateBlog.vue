@@ -26,7 +26,7 @@ export default {
     updateBlog: function() {
       axios
         .request({
-          url: "http://127.0.0.1:5000/blog",
+          url: "http://jayblogpost.ml/api/blog",
           method: "PATCH",
           headers: {
             "content-type": "application/json"
