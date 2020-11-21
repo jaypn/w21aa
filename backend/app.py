@@ -7,7 +7,7 @@ from flask_cors import CORS
    
 app = Flask(__name__)
 CORS(app)
-@app.route("/signup",methods=['POST'])
+@app.route("/api/signup",methods=['POST'])
 def signup():
     if request.method == 'POST':
     
@@ -38,7 +38,7 @@ def signup():
             else:
                 return Response("something went wrong",mimetype="text/html", status=501)
 
-@app.route("/login",methods=['POST'])
+@app.route("api/login",methods=['POST'])
 def login():
     if request.method == 'POST':
     
@@ -75,7 +75,7 @@ def login():
             else:
                 return Response("something went wrong",mimetype="text/html", status=501)           
 
-@app.route("/blog",methods=['GET','POST','PATCH','DELETE'])
+@app.route("api/blog",methods=['GET','POST','PATCH','DELETE'])
 def blog():
     if request.method == 'GET':
         conn = None
